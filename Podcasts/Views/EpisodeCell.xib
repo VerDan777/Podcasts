@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="144" id="sQj-Qq-6Sb" customClass="EpisodeCell" customModule="Podcasts" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="402" height="144"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="sQj-Qq-6Sb" id="5ls-ZZ-FQf">
+                <rect key="frame" x="0.0" y="0.0" width="402" height="143.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gC1-AD-Bao">
+                        <rect key="frame" x="12" y="12" width="100" height="100"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="100" id="5YT-v4-Fcs"/>
+                            <constraint firstAttribute="width" constant="100" id="jcy-sr-Y8g"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="TrackName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6QD-BR-MTx">
+                        <rect key="frame" x="124" y="23" width="103.5" height="25.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="goa-W2-gnQ">
+                        <rect key="frame" x="124" y="60.5" width="36" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cost" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6n1-Z5-HOe">
+                        <rect key="frame" x="358" y="23" width="36" height="97.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="gC1-AD-Bao" firstAttribute="leading" secondItem="5ls-ZZ-FQf" secondAttribute="leading" constant="12" id="2rR-6Z-lWt"/>
+                    <constraint firstItem="gC1-AD-Bao" firstAttribute="top" secondItem="5ls-ZZ-FQf" secondAttribute="top" constant="12" id="53X-sS-Ju3"/>
+                    <constraint firstItem="6n1-Z5-HOe" firstAttribute="centerY" secondItem="5ls-ZZ-FQf" secondAttribute="centerY" id="8ZM-DW-RBX"/>
+                    <constraint firstItem="6n1-Z5-HOe" firstAttribute="top" secondItem="5ls-ZZ-FQf" secondAttribute="topMargin" constant="12" id="MAe-v5-X3S"/>
+                    <constraint firstItem="6n1-Z5-HOe" firstAttribute="trailing" secondItem="5ls-ZZ-FQf" secondAttribute="trailingMargin" constant="12" id="Rte-PI-tYF"/>
+                    <constraint firstItem="goa-W2-gnQ" firstAttribute="leading" secondItem="gC1-AD-Bao" secondAttribute="trailing" constant="12" id="Wu4-yE-MxZ"/>
+                    <constraint firstItem="6QD-BR-MTx" firstAttribute="top" secondItem="5ls-ZZ-FQf" secondAttribute="topMargin" constant="12" id="ZD7-Y6-V5E"/>
+                    <constraint firstItem="6QD-BR-MTx" firstAttribute="leading" secondItem="gC1-AD-Bao" secondAttribute="trailing" constant="12" id="lWV-kb-jEJ"/>
+                    <constraint firstItem="goa-W2-gnQ" firstAttribute="top" secondItem="6QD-BR-MTx" secondAttribute="bottom" constant="12" id="sTZ-Lb-BRC"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="episodeCost" destination="6n1-Z5-HOe" id="Jt8-3Z-iJE"/>
+                <outlet property="episodeImage" destination="gC1-AD-Bao" id="nWK-Ex-ka5"/>
+                <outlet property="episodeTime" destination="goa-W2-gnQ" id="w7K-fH-xhx"/>
+                <outlet property="episodeTrackName" destination="6QD-BR-MTx" id="nd5-j4-dl5"/>
+            </connections>
+            <point key="canvasLocation" x="-374.39999999999998" y="457.87106446776613"/>
+        </tableViewCell>
+    </objects>
+</document>
